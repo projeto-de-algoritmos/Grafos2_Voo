@@ -12,12 +12,17 @@
 ## Sobre 
 Uma agência de turismo criou um sistema para indicar ao usuario a menor rota registrada entre duas cidades.
 
+## apresentacao
+
+![](assets/video/apresentacao.mp4)
+
 ## Screenshots
-![](Images/print1.png)
 
-![](Images/print2.png)
+![](assets/Images/print1.png)
 
-![](Images/print3.png)
+![](assets/Images/print2.png)
+
+![](assets/Images/print3.png)
 
 ## Instalação 
 **Linguagem**: C<br>

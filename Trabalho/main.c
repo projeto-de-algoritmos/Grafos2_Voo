@@ -97,7 +97,7 @@ void pesquisaRota(CIDADE *cidade, int relacoes[100][100], int *nCidades, int dis
     scanf("%d", &cidadeDestino);
     
     distanciaTotal = dijkstra(cidadeOrigem-1, cidadeDestino-1, relacoes, cidade, nCidades, distancia);
-    printf("A menor rota possível da cidade %s a cidade %s e de %d KM\n", cidade[cidadeOrigem-1].nome, cidade[cidadeDestino-1].nome, distanciaTotal);
+    printf("A menor rota possível da cidade %s a cidade %s e de %d Km\n", cidade[cidadeOrigem-1].nome, cidade[cidadeDestino-1].nome, distanciaTotal);
 }
 
 int dijkstra(int cidadeOrigem, int cidadeDestino, int relacoes[100][100], CIDADE *cidade, int *nCidades, int distancia[100][100]){
@@ -118,7 +118,7 @@ int dijkstra(int cidadeOrigem, int cidadeDestino, int relacoes[100][100], CIDADE
                     }
                 }
             }
-            printf("%s -> %s Distancia: %d \n", cidade[x].nome, cidade[cidadeAlvo].nome, distanciaParcial);
+            printf("%s -> %s Distancia: %d Km\n", cidade[x].nome, cidade[cidadeAlvo].nome, distanciaParcial);
             distanciaTotal += distanciaParcial;
             x=0;
         }
@@ -142,16 +142,13 @@ void mostrarCidades(CIDADE *cidade){
 }
 
 void adicionaCidade(int *nCidades,CIDADE *cidade){
-    char nome[50];
-
-    int i = 0;
     if(*nCidades < 100){
+        int i = 0;
         while(cidade[i].valido != 0){
             i++;
         }
         printf("Informe a cidade a ser cadastrada:\n");
-        scanf("%s", nome);
-        strcpy(cidade[i].nome, nome);
+        scanf (" %[^\n]s", cidade[i].nome);
         cidade[i].valido = 1;
         cidade[i].visitado = 0;
         *nCidades = *nCidades + 1;
